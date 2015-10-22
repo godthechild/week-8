@@ -14,7 +14,9 @@ namespace twozerofoureight
     {
         Model model;
         Controller controller;
-       
+
+        TwoZeroFourEightScoreView Sv = new TwoZeroFourEightScoreView();
+
         public TwoZeroFourEightView()
         {
             InitializeComponent();
@@ -86,8 +88,9 @@ namespace twozerofoureight
                     sen = sen + board[s, j];
                 }
             }
-
-            lblScore.Text = Convert.ToString(sen);
+            Sv.scoreview(sen);
+            Sv.Show();
+            
         }
 
         private void btnLeft_Click(object sender, EventArgs e)
