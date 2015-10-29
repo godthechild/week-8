@@ -30,7 +30,7 @@ namespace twozerofoureight
         public void Notify(Model m)
         {
             UpdateBoard(((TwoZeroFourEightModel) m).GetBoard());
-            UpdateScores(((TwoZeroFourEightModel)m).GetBoard());
+            UpdateScores(((TwoZeroFourEightModel)m).Getsum());
         }
 
         private void UpdateTile(Label l, int i)
@@ -80,15 +80,10 @@ namespace twozerofoureight
             UpdateTile(lbl33,board[3, 3]);
         }
 
-        private void UpdateScores(int[,] board)
+        private void UpdateScores(int sum)
         {
-            int sen = 0;
-            for (int s = 0; s < 4; s++) {
-                for (int j = 0; j < 4; j++) {
-                    sen = sen + board[s, j];
-                }
-            }
-            Sv.scoreview(sen);
+            lblScore.Text = Convert.ToString(sum);
+            Sv.scoreview(sum);
             Sv.Show();
             
         }
