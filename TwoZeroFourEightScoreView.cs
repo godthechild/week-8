@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace twozerofoureight
 {
-    public partial class TwoZeroFourEightScoreView : Form
+    public partial class TwoZeroFourEightScoreView : Form,View
     {
         public TwoZeroFourEightScoreView()
         {
             InitializeComponent();
+        }
+        public void Notify(Model m)
+        {
+
+            scoreview(((TwoZeroFourEightModel)m).Getsum());
         }
 
         public void scoreview(int sv) {
@@ -23,6 +28,11 @@ namespace twozerofoureight
         }
 
         private void num_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TwoZeroFourEightScoreView_Load(object sender, EventArgs e)
         {
 
         }

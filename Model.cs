@@ -26,6 +26,7 @@ namespace twozerofoureight
         public void AttachObserver(View m)
         {
             oList.Add(m);
+
         }
 
     }
